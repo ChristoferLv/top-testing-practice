@@ -81,8 +81,20 @@ function caesarCipher(value, shift) {
     return shiftedArr;
 }
 
-function analyzeArray(value) {
-
+/**
+ * 
+ * @param {Int32Array} arr 
+ */
+function analyzeArray(arr) {
+    const min = Math.min(...arr);
+    const max = Math.max(...arr);
+    const len = arr.length;
+    const sum = arr.reduce((acc, cur) => {
+        return acc + cur;
+    }, 0)
+    const average = sum / len;
+    console.log(min, max, len, sum)
+    return { min, max, len, average };
 }
 
 
