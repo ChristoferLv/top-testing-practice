@@ -43,14 +43,30 @@ describe("Solves the 'calculator' test for the 'Testing Practice' lesson. Create
     });
 })
 
-describe("Solves the 4th test for the 'Testing Practice' lesson", () => {
-    it("Takes a string and a shift factor and returns it with each character 'shifted'", () => {
+describe("Solves the 'caesarCipher' item on the 'Testing Practice' lesson", () => {
+    it("Takes a string and a shift factor and returns it with each character 'shifted'.", () => {
         const testString = "abcde";
         const shiftFactor = 2;
         const expectedResult = "cdefg";
 
         expect(caesarCipher(testString, shiftFactor)).toEqual(expectedResult);
-    })
+    });
+
+    it("Should preserve case.", () => {
+        const testString = "aBCcdeFGhIJk";
+        const shiftFactor = 22;
+        const expectedResult = "wXYyzaBCdEFg";
+
+        expect(caesarCipher(testString, shiftFactor)).toEqual(expectedResult);
+    });
+
+    it("Should preserve non-alphabetical characters.", () => {
+        const testString = "aBCzd!  alst.@";
+        const shiftFactor = 7;
+        const expectedResult = "hIJgk!  hsza.@";
+
+        expect(caesarCipher(testString, shiftFactor)).toEqual(expectedResult);
+    });
 });
 
 describe("Solves the 'ArrayAnalyzer' test for the 'Testing Practice' lesson", () => {
