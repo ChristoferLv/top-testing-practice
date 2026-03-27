@@ -9,9 +9,25 @@ function capitalize(value) {
     return value.charAt(0).toUpperCase() + value.slice(1);
 }
 
+/**
+ * 
+ * @param {string} value 
+ */
 function reverse(value) {
+    
+}
+
+function calculator(value) {
+
+}
+
+function caesarCipher(value) {
+
+}
+
+function analyzeArray(value) {
 
 }
 
 
-export { capitalize, reverse };
+export { capitalize, reverse, calculator, caesarCipher, analyzeArray };
