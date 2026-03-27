@@ -18,7 +18,46 @@ function reverse(value) {
 }
 
 function calculator(value) {
+    /**
+     * 
+     * @param {number} op1 
+     * @param {number} op2
+     * @returns {number} 
+     */
+    const add = function (op1, op2) {
+        return op1 + op2;
+    }
+    /**
+         * 
+         * @param {number} op1 
+         * @param {number} op2
+         * @returns {number} 
+         */
+    const subtract = function (op1, op2) {
+        return op1 - op2;
+    }
+    /**
+         * 
+         * @param {number} op1 
+         * @param {number} op2
+         * @returns {number} 
+         */
+    const multiply = function (op1, op2) {
+        return op1 * op2;
+    }
+    /**
+         * 
+         * @param {number} op1 
+         * @param {number} op2
+         * @returns {number} 
+         */
+    const divide = function (op1, op2) {
+        if(op2 == 0)
+            return Infinity;
+        return op1 / op2;
+    }
 
+    return { add, subtract, multiply, divide };
 }
 
 function caesarCipher(value) {

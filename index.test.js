@@ -28,7 +28,6 @@ describe("Solves the 'calculator' test for the 'Testing Practice' lesson. Create
     })
     it("Should perform sum correctly.", () => {
         expect(calc.add(op1, op2)).toEqual(addRes);
-
     });
     it("Should perform subtraction correctly.", () => {
         expect(calc.subtract(op1, op2)).toEqual(subtractRes);
@@ -38,6 +37,9 @@ describe("Solves the 'calculator' test for the 'Testing Practice' lesson. Create
     });
     it("Should perform division correctly.", () => {
         expect(calc.divide(op1, op2)).toEqual(divideRes);
+    });
+    it("Should return 'infinity' when operator 2 is 0.", () => {
+        expect(calc.divide(op1, 0)).toEqual(Infinity);
     });
 })
 
