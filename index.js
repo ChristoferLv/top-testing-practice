@@ -14,7 +14,7 @@ function capitalize(value) {
  * @param {string} value 
  */
 function reverse(value) {
-    
+    return value.split('').reverse().join('');
 }
 
 function calculator(value) {
